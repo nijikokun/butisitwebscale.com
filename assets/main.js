@@ -6,6 +6,18 @@ var not = ['php','java','go','golang','ruby','haskell','mongo','mongodb']
 var nope = ['nope','not even close', 'no way', 'haha', 'seriously? no.', 'try again later, or never.','ugh','needs to be about 20% more webscale']
 var yeps = ['YES','Sure is', 'its over 9000 webscales', 'about 10 webscales', 'totally', 'fersure', 'yep', 'yup']
 
+function check (value) {
+  var values = value.split(' ')
+
+  for (var i = 0; i < values.length; i++) {
+    if (not.indexOf(values[i]) !== -1) {
+      return true
+    }
+  }
+
+  return false
+}
+
 $button.on('click', function (e) {
   e.preventDefault()
 
@@ -15,7 +27,7 @@ $button.on('click', function (e) {
     return result.html('... it could be')
   }
 
-  if (not.indexOf(value) !== -1) {
+  if (check(value)) {
     result.html(nope[Math.floor(nope.length * Math.random())]).attr('class', 'result no')
   } else {
     result.html(yeps[Math.floor(yeps.length * Math.random())]).attr('class', 'result yes')
