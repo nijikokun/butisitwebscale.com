@@ -1,20 +1,104 @@
 body {
-  font-family: 'Comic Sans MS';
-  text-align: center;
-  margin: 50px;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  background: #e75b4c;
+  color: #FFF;
 
-  background: white;
+  width: 95%;
+  max-width: 1000px;
+  margin: 6em auto 0;
 }
 
-.no {
-  color: red
+.top {
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 0.69em;
+  line-height: 2.2;
+  z-index: 300;
+  font-weight: 700;
 }
 
-.yes {
-  color: green
+.top span.right {
+  float: right;
+}
+
+.top a {
+  text-decoration: none;
+  padding: 0 10px;
+  letter-spacing: 0.1em;
+  color: hsla(0, 0%, 0%, 0.4);
+  display: inline-block;
+}
+
+.top a:hover {
+  color: white;
+}
+
+h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0.6rem 0;
+}
+
+h1 span, h2 span {
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.15em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0.3rem 0;
 }
 
 input, button {
-  font-size: 36px;
+  font-size: 24px;
   padding: 10px;
+}
+
+.press-enter {
+  color: hsl(6, 76%, 60%);
+  display: inline-block;
+  position: relative;
+  top: -111px;
+  right: calc(-100% + 145px);
+  z-index: 1;
+  border: 2px solid hsl(6, 76%, 60%);
+  border-radius: 3px;
+  padding: 2px 8px 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .2s;
+}
+
+.loader-inner.line-scale-party {
+  display: inline-block;
+  position: relative;
+  top: -96px;
+  right: calc(-100% + 72px);
+  z-index: 1;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.line-scale-party > div {
+  background-color: hsl(6, 76%, 60%);
+}
+
+.no {
+  color: #000;
+  font-size: 3em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.yes {
+  color: hsl(0, 100%, 100%);
+  font-size: 3em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
