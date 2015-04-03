@@ -90,3 +90,8 @@ input.bind('keypress', function (e) {
     setTimeout(evaluate, 1000)
   }
 })
+
+
+setTimeout(function () {
+  input.focus()
+}, 500)
